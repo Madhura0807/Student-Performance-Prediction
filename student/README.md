@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Student Performance Prediction
 
 A complete Flask-based machine learning web application that predicts a student's math score based on academic and demographic inputs.
@@ -68,4 +68,4 @@ A complete Flask-based machine learning web application that predicts a student'
 - templates/
 - static/
 - logs/
->>>>>>> 081be253a9beee0d404c7dd8d6ac32e579d38376
+
