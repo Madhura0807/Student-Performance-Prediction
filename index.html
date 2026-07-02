@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-card p-5 rounded-4 shadow-lg">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <h1 class="display-5 fw-bold mb-3">Predict Student Success with Confidence</h1>
+            <p class="lead mb-4">This intelligent application forecasts a student's math performance using demographic and academic indicators, helping educators and families make informed decisions.</p>
+            <div class="d-flex gap-3 flex-wrap">
+                <a href="{{ url_for('predict') }}" class="btn btn-primary btn-lg">Try Prediction</a>
+                <a href="{{ url_for('model_info') }}" class="btn btn-outline-light btn-lg">View Model</a>
+            </div>
+        </div>
+        <div class="col-lg-5 text-center">
+            <div class="hero-icon"><i class="fa-solid fa-chart-line"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4 g-4">
+    <div class="col-md-4">
+        <div class="card feature-card h-100">
+            <div class="card-body">
+                <i class="fa-solid fa-brain feature-icon"></i>
+                <h5>AI-powered</h5>
+                <p>Leverages trained regression models to estimate performance from multiple inputs.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card feature-card h-100">
+            <div class="card-body">
+                <i class="fa-solid fa-shield-halved feature-icon"></i>
+                <h5>Reliable</h5>
+                <p>Built with validation and error handling to keep the experience robust and user-friendly.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card feature-card h-100">
+            <div class="card-body">
+                <i class="fa-solid fa-mobile-screen feature-icon"></i>
+                <h5>Responsive</h5>
+                <p>Delivers a polished experience on desktops, tablets, and phones alike.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card glass-card p-4">
+            <h2 class="mb-3">Predict Student Performance</h2>
+            <form action="{{ url_for('predict') }}" method="post" class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" name="gender" required data-bs-toggle="tooltip" title="Select the student's gender">
+                            <option value="">Choose...</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Race/Ethnicity</label>
+                        <select class="form-select" name="race" required data-bs-toggle="tooltip" title="Select the student's race or ethnicity group">
+                            <option value="">Choose...</option>
+                            <option>group A</option>
+                            <option>group B</option>
+                            <option>group C</option>
+                            <option>group D</option>
+                            <option>group E</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Parental Education</label>
+                        <select class="form-select" name="education" required data-bs-toggle="tooltip" title="Choose the highest parental education level">
+                            <option value="">Choose...</option>
+                            <option>bachelor's degree</option>
+                            <option>master's degree</option>
+                            <option>associate's degree</option>
+                            <option>high school</option>
+                            <option>some college</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Lunch Type</label>
+                        <select class="form-select" name="lunch" required data-bs-toggle="tooltip" title="Indicates whether the student receives a standard or subsidized lunch">
+                            <option value="">Choose...</option>
+                            <option>standard</option>
+                            <option>free/reduced</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Test Preparation</label>
+                        <select class="form-select" name="preparation" required data-bs-toggle="tooltip" title="Indicates if the student completed test preparation">
+                            <option value="">Choose...</option>
+                            <option>completed</option>
+                            <option>none</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Reading Score</label>
+                        <input type="number" class="form-control" name="reading_score" min="0" max="100" required data-bs-toggle="tooltip" title="Enter the student's reading score from 0 to 100">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Writing Score</label>
+                        <input type="number" class="form-control" name="writing_score" min="0" max="100" required data-bs-toggle="tooltip" title="Enter the student's writing score from 0 to 100">
+                    </div>
+                </div>
+                <div class="mt-4 d-flex gap-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magic"></i> Predict</button>
+                    <button type="reset" class="btn btn-outline-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card glass-card p-4">
+            <h4>Prediction Tips</h4>
+            <ul class="mt-3">
+                <li>Scores should be between 0 and 100.</li>
+                <li>After submitting, a result card shows the predicted score and interpretation.</li>
+                <li>The app uses the strongest trained model automatically.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
