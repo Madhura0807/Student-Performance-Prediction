@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card glass-card p-4">
+            <h2 class="mb-3">Model Information</h2>
+            <p>This app trains multiple regression models and automatically selects the one with the highest R² score. The best-performing model is saved and used for future predictions.</p>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6"><div class="stat-card p-3 rounded-3"><h5>Linear Regression</h5><p>Baseline benchmark model.</p></div></div>
+                <div class="col-md-6"><div class="stat-card p-3 rounded-3"><h5>Decision Tree</h5><p>Captures non-linear relationships.</p></div></div>
+                <div class="col-md-6"><div class="stat-card p-3 rounded-3"><h5>Random Forest</h5><p>Ensemble of decision trees for robustness.</p></div></div>
+                <div class="col-md-6"><div class="stat-card p-3 rounded-3"><h5>CatBoost</h5><p>High-performance gradient boosting with categorical support.</p></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card glass-card p-4">
+            <h4>Visualizations</h4>
+            {% if visuals %}
+            <img src="{{ url_for('static', filename=visuals.score_plot) }}" class="img-fluid rounded mt-3" alt="Score distribution">
+            <img src="{{ url_for('static', filename=visuals.model_plot) }}" class="img-fluid rounded mt-3" alt="Model comparison">
+            <img src="{{ url_for('static', filename=visuals.importance_plot) }}" class="img-fluid rounded mt-3" alt="Feature importance">
+            {% else %}
+            <p class="text-muted">Run the training pipeline to generate charts.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

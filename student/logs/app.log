@@ -1,0 +1,4 @@
+2026-07-02 21:23:19,627 - src.components.data_ingestion - INFO - Dataset not found. Creating a synthetic student performance dataset.
+2026-07-02 21:23:19,670 - src.components.data_transformation - INFO - Preprocessor created successfully.
+2026-07-02 21:23:22,801 - src.components.model_trainer - INFO - Training complete. Best model: Linear Regression
+2026-07-02 21:28:58,704 - src.pipeline.predict_pipeline - INFO - Model loaded successfully.

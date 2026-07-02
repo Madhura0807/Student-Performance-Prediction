@@ -1,0 +1,32 @@
+{
+  "Linear Regression": {
+    "mae": 5.7635,
+    "mse": 43.2695,
+    "rmse": 6.578,
+    "r2_score": 0.692
+  },
+  "Decision Tree": {
+    "mae": 7.6429,
+    "mse": 86.5286,
+    "rmse": 9.3021,
+    "r2_score": 0.384
+  },
+  "Random Forest": {
+    "mae": 6.0871,
+    "mse": 51.6482,
+    "rmse": 7.1867,
+    "r2_score": 0.6323
+  },
+  "XGBoost": {
+    "mae": 6.2449,
+    "mse": 55.2291,
+    "rmse": 7.4316,
+    "r2_score": 0.6068
+  },
+  "CatBoost": {
+    "mae": 6.2972,
+    "mse": 52.2584,
+    "rmse": 7.229,
+    "r2_score": 0.628
+  }
+}

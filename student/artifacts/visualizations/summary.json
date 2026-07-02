@@ -1,0 +1,5 @@
+{
+  "score_plot": "plots/math_score_distribution.png",
+  "model_plot": "plots/model_comparison.png",
+  "importance_plot": "plots/feature_importance.png"
+}
