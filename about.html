@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card glass-card p-4">
+            <h2 class="mb-3">About the Project</h2>
+            <p>The Student Performance Prediction web application combines machine learning and modern web design to estimate math scores from educational and demographic attributes. It showcases a clean MVC-style Flask architecture with modular training and prediction pipelines.</p>
+            <p>Users can enter a student's profile, receive a predicted score, and see an interpretation of the anticipated performance. The app also includes model comparison visuals and feature importance insights.</p>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card glass-card p-4 text-center">
+            <i class="fa-solid fa-book-open feature-icon"></i>
+            <h5>Educational Use</h5>
+            <p>Useful for academic planning, performance monitoring, and student support initiatives.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
